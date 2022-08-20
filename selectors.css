@@ -1,0 +1,36 @@
+html {
+    text-align: left;
+    color: aqua;
+    background-color: green;
+}
+
+/* {
+    background-color: beige;
+}*/
+
+.class {
+border-radius: 40px;
+box-shadow: 0 2px 5px red;
+height: 100px;
+width: 100px;
+margin-top: 15px;
+margin-bottom: 20px;
+color: blueviolet;
+}
+
+div p{
+    font-size: 30px;
+}
+
+div h2, div h3{
+    color: blue;
+    font-weight: 700;
+}
+
+#id {
+    
+}
+
+#id2 {
+    
+}
