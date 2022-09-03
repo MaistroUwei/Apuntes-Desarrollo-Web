@@ -1,18 +1,30 @@
 //rafc React Functional Component
 //rafce React Functional Component + export
-import React from 'react'
+import React, { useState} from 'react'
 import { FirstComponents } from './components/FirstComponents';
+import { ShowCounter } from './components/ShowCounter';
+import { AddCounter } from './components/AddCounter';
+import { RemoveCounter } from './components/RemoveCounter';
 import './styles.css'
 
 export const Main = () => {
+
+  const [number, setNumber] = useState(0);
+  // setNumber(45)
+  const onAdd = () =>{
+    setNumber(number + 1);
+    console.log('I added one');
+  }
+  const onRemove = () =>{
+    setNumber(number - 1);
+    console.log('I removed one');
+  }
   return (
     <>
-        <ShowCounter number={5}/>
-        <AddCounter number={5}/>
+      <ShowCounter 
+        number={number}/>
+      <AddCounter onAddPress={onAdd}/>
+      <RemoveCounter onRemovePress={onRemove}/>
     </>
-    //<FirstComponents
-    //title="Mi titulo"
-    //subtitle="Subtitulooooo"
-    ///>
   );
 }
