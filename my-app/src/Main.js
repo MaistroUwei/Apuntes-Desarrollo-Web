@@ -16,7 +16,10 @@ export const Main = () => {
     console.log('I added one');
   }
   const onRemove = () =>{
-    setNumber(number - 1);
+    if (number > 0)
+    {
+      setNumber(number - 1);
+    }
     console.log('I removed one');
   }
   return (
